@@ -15,6 +15,20 @@ namespace RainbowMod
         {
             return new Color(Main.DiscoR, Main.DiscoG, Main.DiscoB);
         }
+        
+        public override bool PreDrawInInventory(Item item, SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
+		{
+			spriteBatch.Draw(Main.itemTexture[item.type], position, null, Main.DiscoColor, 0f, origin, scale, SpriteEffects.None, 0f);
+			return false;
+		}
+
+		public override void ModifyTooltips(Item item, List<TooltipLine> tooltips)
+		{
+			for (int i = 0; i < tooltips.Count; i++)
+			{
+				tooltips[i].overrideColor = Main.DiscoColor;
+			}
+		}
     }
 
     public class RainbowGlobalNPC : GlobalNPC
