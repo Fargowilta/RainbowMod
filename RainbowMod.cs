@@ -1,4 +1,9 @@
 using Terraria.ModLoader;
+using Terraria;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.Graphics.Effects;
+using Terraria.ID;
+using Terraria.Graphics.Shaders;
 
 namespace RainbowMod
 {
