@@ -18,6 +18,28 @@ namespace RainbowMod
                         // Get the Tile
                         Tile tile = Framing.GetTileSafely(i, j);
 
+                    // Dedede, that's the name you should know
+                    // Dedede, he's the star of the show
+                    if (tile.type == TileID.LihzahrdBrick ||
+                        tile.type == TileID.BlueDungeonBrick || tile.type == TileID.GreenDungeonBrick || tile.type == TileID.PinkDungeonBrick ||
+                        tile.type == TileID.Copper || tile.type == TileID.Iron || tile.type == TileID.Silver || tile.type == TileID.Gold ||
+                        tile.type == TileID.Tin || tile.type == TileID.Lead || tile.type == TileID.Tungsten || tile.type == TileID.Platinum ||
+                        tile.type == TileID.Containers || tile.type == TileID.Containers2 || Main.tileContainer[tile.type] == true ||
+                        tile.type == TileID.Trees || tile.type == TileID.Chairs || tile.type == TileID.Tables || tile.type == TileID.Tables2 ||
+                        tile.wall == WallID.LihzahrdBrickUnsafe || tile.wall == WallID.SpiderUnsafe ||
+                        tile.wall == WallID.BlueDungeonUnsafe || tile.wall == WallID.BlueDungeonSlabUnsafe || tile.wall == WallID.BlueDungeonTileUnsafe ||
+                        tile.wall == WallID.GreenDungeonUnsafe || tile.wall == WallID.GreenDungeonSlabUnsafe || tile.wall == WallID.GreenDungeonTileUnsafe ||
+                        tile.wall == WallID.PinkDungeonUnsafe || tile.wall == WallID.PinkDungeonSlabUnsafe || tile.wall == WallID.PinkDungeonTileUnsafe ||
+                        tile.type == TileID.LihzahrdAltar || tile.type == TileID.ShadowOrbs || tile.type == TileID.DemonAltar || tile.type == TileID.Larva || tile.type == TileID.Hive ||
+                        tile.type == TileID.Spikes || tile.type == TileID.Platforms || tile.type == TileID.Books || tile.type == TileID.Bookcases ||
+                        tile.type == TileID.Ebonstone || tile.type == TileID.CorruptIce || tile.type == TileID.CorruptHardenedSand || tile.type == TileID.CorruptThorns ||
+                        tile.type == TileID.Crimstone || tile.type == TileID.FleshIce || tile.type == TileID.CrimsonHardenedSand || tile.type == TileID.CrimsonVines ||
+                        !Main.tileSolid[tile.type]) // argh hopefully this covers all furniture
+                            continue;
+
+
+
+
                         ReplaceTile(tile, TileID.RainbowBrick, i, j);
 
                         if (tile.wall != 0)
