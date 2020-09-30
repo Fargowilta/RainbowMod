@@ -47,14 +47,14 @@ namespace RainbowMod
         }
     }
 
-    public class RainbowGlobalTile : GlobalTile
+    /*public class RainbowGlobalTile : GlobalTile
     {
         public override void DrawEffects(int i, int j, int type, SpriteBatch spriteBatch, ref Color drawColor, ref int nextSpecialDrawIndex)
         {
             drawColor = new Color(Main.DiscoR, Main.DiscoG, Main.DiscoB);
             //Main.tile[i, j].wall = WallID.RainbowBrick;
         }
-    }
+    }*/
 
     public class RainbowPlayer : ModPlayer
     {
@@ -62,7 +62,6 @@ namespace RainbowMod
         {
 
             byte rainbow = (byte)GameShaders.Armor.GetShaderIdFromItemId(2870);
-
 
             for (int i = 0; i < player.dye.Length; i++)
             {
@@ -75,8 +74,6 @@ namespace RainbowMod
             }
 
             player.UpdateDyes(player.whoAmI);
-
-
         }
     }
 }

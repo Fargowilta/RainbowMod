@@ -1,9 +1,16 @@
+using Microsoft.Xna.Framework.Graphics;
+using System.ComponentModel;
+using Terraria;
+using Terraria.Graphics.Effects;
+using Terraria.Graphics.Shaders;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.Graphics.Shaders;
+using Terraria.ModLoader.Config;
 
 namespace RainbowMod
 {
@@ -36,4 +43,14 @@ namespace RainbowMod
 			}
 		}
 	}
+
+    public class RainbowConfig : ModConfig
+    {
+        public override ConfigScope Mode => ConfigScope.ServerSide;
+        public static RainbowConfig Instance;
+
+        [Label("Rainbow Worldgen")]
+        [DefaultValue(true)]
+        public bool rainbowGen;
+    }
 }
