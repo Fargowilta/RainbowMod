@@ -1,1 +1,10 @@
+-Removed rainbow tiles because its not really needed with rainbow shader *
+
+
+
+NEW UPDATE - V 1.0
+-Rainbow Tooltips!
+-Rainbow shader!
+-The entire world is rainbow blocks and walls on worldgen! (with toggle)
+
 Rainbow Mod makes all players, projectiles, NPCs, and tiles rainbow!

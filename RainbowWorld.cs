@@ -8,23 +8,26 @@ namespace RainbowMod
     {
         public override void PostWorldGen()
         {
-            for (int i = 0; i < Main.maxTilesX; i++)
+            if (RainbowConfig.Instance.rainbowGen)
             {
-                // Every Y coord with that X coord
-                for (int j = 0; j < Main.maxTilesY; j++)
+                for (int i = 0; i < Main.maxTilesX; i++)
                 {
-                    // Get the Tile
-                    Tile tile = Framing.GetTileSafely(i, j);
-
-                    ReplaceTile(tile, TileID.RainbowBrick, i, j);
-
-                    if (tile.wall != 0)
+                    // Every Y coord with that X coord
+                    for (int j = 0; j < Main.maxTilesY; j++)
                     {
-                        ReplaceWall(tile, WallID.RainbowBrick, i, j);
-                    }
-                    else
-                    {
-                        ReplaceWall(tile, WallID.RainbowStainedGlass, i, j);
+                        // Get the Tile
+                        Tile tile = Framing.GetTileSafely(i, j);
+
+                        ReplaceTile(tile, TileID.RainbowBrick, i, j);
+
+                        if (tile.wall != 0)
+                        {
+                            ReplaceWall(tile, WallID.RainbowBrick, i, j);
+                        }
+                        else
+                        {
+                            ReplaceWall(tile, WallID.RainbowStainedGlass, i, j);
+                        }
                     }
                 }
             }
